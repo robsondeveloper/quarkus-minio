@@ -16,6 +16,19 @@ public class Photo {
     @Column(name = "object_name")
     private String objectName;
 
+    @ManyToOne
+    @JoinColumn(name = "product_id", columnDefinition = "int4")
+    private Product product;
+
+    public Photo() {
+    }
+
+    public Photo(String bucket, String objectName, Product product) {
+        this.bucket = bucket;
+        this.objectName = objectName;
+        this.product = product;
+    }
+
     public Long getId() {
         return id;
     }

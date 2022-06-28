@@ -10,17 +10,17 @@ public class FormData {
 
     @RestForm
     @PartType(MediaType.TEXT_PLAIN)
-    private String description;
+    private Long productId;
 
     @RestForm("photo")
     private FileUpload fileUpload;
 
-    public String getDescription() {
-        return description;
+    public Long getProductId() {
+        return productId;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
     public FileUpload getFileUpload() {
